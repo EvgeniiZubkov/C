@@ -10,4 +10,4 @@ int number = Convert.ToInt32(Console.ReadLine());
 // int number = Convert.ToInt32(str);
 
 int square = number * number;
-Console.WriteLine($"Квадрат числа {number} = {square}");
+Console.WriteLine($"Квадрат числа {number} ={square}");
