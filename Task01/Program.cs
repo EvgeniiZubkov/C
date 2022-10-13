@@ -1,10 +1,17 @@
-﻿Console.WriteLine("введите первое целое число ");
+﻿// Напишите программу, которая на вход принимает два
+//числа и проверяет, является ли первое число квадратом
+//второго.
+
+Console.WriteLine("введите первое целое число ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите второе целое число ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 if(number1 == number2 * number2)
-{Console.WriteLine("Верно!");
+{
+    Console.WriteLine("Верно!");
 }
 else
-{Console.WriteLine("Не верно!");
+{
+    Console.WriteLine("Не верно!");
+
 }
