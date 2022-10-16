@@ -3,14 +3,12 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.WriteLine("Введите целое число");
+Console.WriteLine("Введите целое положительное число");
 int number = Convert.ToInt32(Console.ReadLine());
 int count = 0;
-int print = 0;
-while (count < number)
+while (count <= number)
 {
-    if (print == count % 2)
-        Console.WriteLine(print);
-    else
-    count = count + 1;
+if (count % 2 == 0)
+Console.WriteLine(count);
+count = count + 1;
 }
