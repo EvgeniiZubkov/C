@@ -5,7 +5,7 @@
 
 Console.WriteLine("Введите целое положительное число");
 int number = Convert.ToInt32(Console.ReadLine());
-int count = 0;
+int count = 1;
 while (count <= number)
 {
 if (count % 2 == 0)
