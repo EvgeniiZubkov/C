@@ -40,7 +40,9 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int DayOff(int num)
 {
+
     int dayOff = number;
+
     if (num == 1)
     {
         Console.WriteLine("Нет");
@@ -71,7 +73,6 @@ int DayOff(int num)
     }
     else
         Console.WriteLine("Нет такого дня");
-    return DayOff(num);
+            return dayOff = number;
 }
-
 int dayOff = DayOff(number);
