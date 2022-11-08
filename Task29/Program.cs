@@ -10,7 +10,7 @@ void Array()
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(-100, 101);
-        Console.Write($"{array[i]} ");
+        Console.Write($"{array[i]}, ");
     }
 }
 
