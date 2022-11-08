@@ -8,18 +8,18 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int SumNumber(int num)
 {
-    int summ = 0;
+    int sum = 0;
     num = Math.Abs(num);
 
     while (num / 10 > 0)
     {
         int ostatok = num % 10;
-        summ = summ + ostatok;
+        sum = sum + ostatok;
         num = num / 10;
     }
-    summ = num + summ;
+    sum = num + sum;
 
-    return summ;
+    return sum;
 }
 
 int sumNumber = SumNumber(number);
