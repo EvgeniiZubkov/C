@@ -6,10 +6,22 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int sum = default;
-for (int i = 0; i < number.; i++)
+int SumNumber(int num)
 {
-    int sum = sum + (number % 10);
-    number = number / 10;
+    int summ = 0;
+    num = Math.Abs(num);
+
+    while (num / 10 > 0)
+    {
+        int ostatok = num % 10;
+        summ = summ + ostatok;
+        num = num / 10;
+    }
+    summ = num + summ;
+
+    return summ;
 }
-Console.WriteLine(sum);
+
+int sumNumber = SumNumber(number);
+
+Console.WriteLine($"Сумма отдельных цифр из введенного числа равна: {sumNumber}");
