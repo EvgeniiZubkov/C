@@ -24,7 +24,7 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int[] Return(int[] array)
+int[] InversionArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -37,4 +37,4 @@ int[] Return(int[] array)
 
 int[] arr = CreateArrayRndInt(4, -9, 9);
 PrintArray(arr);
-Return(arr);
+InversionArray(arr);
