@@ -7,9 +7,6 @@
 // 8 4 2 4
 // 1, 7 -> такого элемента в массиве нет
 
-Console.WriteLine("Введите число: ");
-
-
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];
@@ -40,15 +37,36 @@ void PrintMatrix(int[,] matrix)
 
 }
 
-void SearchElement(int[,] matrix, int num)
+void SearchElement(int[,] matrix, int x, int y)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int matrixRowsLength = matrix.GetLength(0);
+    int matrixColumnsLength = matrix.GetLength(1);
+
+    if (x > matrixRowsLength || y > matrixColumnsLength)
+    Console.WriteLine("Такого элемента в массиве нет");
+    else
     {
-        for (int j = 0; j < matrix.GetLength(1); i++)
+        for (int i = 0; i < matrix.GetLength(0) + 1; i++)
         {
-            if (j = num) Console.WriteLine("Да");
-            else Console.WriteLine("Нет");
+            if (i == x)
+            {
+                for (int j = 0; j < matrix.GetLength(1) + 1; j++)
+                {
+                    if (j == y)
+                    Console.Write($"Искомый элемент массива равен: {matrix[i - 1, j - 1]}");
+                }
+            }
         }
     }
 }
 
+int[,] matrixRndInt = CreateMatrixRndInt(3, 4, -10, 10);
+PrintMatrix(matrixRndInt);
+
+Console.WriteLine("Введите строку: ");
+int row = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите столбец: ");
+int column = Convert.ToInt32(Console.ReadLine());
+
+SearchElement(matrixRndInt, row, column);
