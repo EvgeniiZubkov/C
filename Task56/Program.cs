@@ -64,17 +64,16 @@ int[] NewArray(int[,] matrix)
 int MinRow(int[] array)
 {
     int min = array[0];
-    for (int i = 1; i < array.Length - 1; i++)
+    int minIndex = default;
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        if (min <= array[i])
+        if (array[i] < min)
         {
-            min = i;
-            temp = min;
+            min = array[i];
+            minIndex = i;
         }
-        else
-        array[i] = temp;
     }
-    return min;
+    return minIndex;
 }
 
 int[,] matrixRndInt = CreateMatrixRndInt(4, 4, 0, 3);
@@ -83,4 +82,4 @@ Console.WriteLine();
 int[] newArray = NewArray(matrixRndInt);
 PrintArray(newArray);
 int minRow = MinRow(newArray);
-Console.WriteLine($"{minRow}");
+Console.WriteLine($"{minRow} строка является строкой с наименьшей суммой элементов массива");
